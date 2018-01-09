@@ -1,0 +1,12 @@
+{% extends 'main_page.html' %}
+{% block title1 %}<title>Account</title>{% endblock %}
+{% block title2 %}
+    <div id="header"><h1>Account</h1></div>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h3>You are now logged in.</h3>
+        <p>Click <a href="{% url 'logout_url' %}">here</a> to logout.</p>
+    </div>
+    <br>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'main_page.html' %}
+{% block title1 %}<title>Actors</title>{% endblock %}
+{% block title2 %}
+    <div id="header"><h1>Actors</h1></div>
+{% endblock %}
+{% block body %}
+    <div class="container">
+            <div class="row centered">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Actor</th>
+                </tr>
+                {% for actor in object_list %}
+                    <tr>
+                        <td>{{ actor.actor_id }}</td>
+                        <td>{{ actor.actor_name }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
+{% endblock %}

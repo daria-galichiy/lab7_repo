@@ -1,0 +1,37 @@
+{% extends 'main_page.html' %}
+{% block title1 %}<title>Films</title>{% endblock %}
+{% block title2 %}
+    <div id="header"><h1>Films</h1></div>
+{% endblock %}
+{% block body %}
+    <div class="container">
+            <div class="row centered">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Film</th>
+                    <th>Release date</th>
+                    <th>Filmmaker</th>
+                    <th>Film writer</th>
+                    <th>Producer</th>
+                    <th>Cameraman</th>
+                    <th>Country</th>
+                    <th>Box office results, $</th>
+                </tr>
+                {% for film in object_list %}
+                    <tr>
+                        <td>{{ film.film_id }}</td>
+                        <td>{{ film.film_name }}</td>
+                        <td>{{ film.release_date }}</td>
+                        <td>{{ film.filmmaker.filmmaker_name }}</td>
+                        <td>{{ film.film_writer.film_writer_name }}</td>
+                        <td>{{ film.producer.producer_name }}</td>
+                        <td>{{ film.cameraman.cameraman_name }}</td>
+                        <td>{{ film.country.country_name }}</td>
+                        <td>{{ film.box_office_results }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
+{% endblock %}

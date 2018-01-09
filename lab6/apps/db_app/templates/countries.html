@@ -1,0 +1,23 @@
+{% extends 'main_page.html' %}
+{% block title1 %}<title>Countries</title>{% endblock %}
+{% block title2 %}
+    <div id="header"><h1>Countries</h1></div>
+{% endblock %}
+{% block body %}
+    <div class="container">
+            <div class="row centered">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                </tr>
+                {% for country in object_list %}
+                    <tr>
+                        <td>{{ country.country_id }}</td>
+                        <td>{{ country.country_name }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
+{% endblock %}
